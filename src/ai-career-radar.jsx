@@ -150,7 +150,7 @@ function CoverLetterModal({ job, profile, onClose }) {
   }, [job, profile]);
 
   // eslint-disable-next-line
-useEffect(() => { generate(); }, []);
+useEffect(() => { generate(); }, [generate]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" onClick={e => e.target === e.currentTarget && onClose()}>
